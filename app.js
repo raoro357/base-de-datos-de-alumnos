@@ -51,3 +51,36 @@ function Alumno(nombre, apellidos, edad) {
   console.log("Calificaciones:", alumno1.calificaciones);
   console.log("Promedio de Matemáticas:", alumno1.obtenerPromedioMateria("Matemáticas"));
   console.log("Promedio de Historia:", alumno1.obtenerPromedioMateria("Historia"));
+
+  // Definición del prototipo de objeto "Grupo"
+function Grupo(nombreGrupo) {
+  this.nombreGrupo = nombreGrupo;
+  this.alumnos = [];
+
+  // Método para añadir un alumno al grupo
+  this.agregarAlumno = function(alumno) {
+    this.alumnos.push(alumno);
+  };
+
+  // Método para obtener la lista de alumnos en el grupo
+  this.obtenerAlumnos = function() {
+    return this.alumnos;
+  };
+}
+
+// Creación de instancias de alumnos
+const alumno1 = new Alumno("Juan", "Pérez", 20);
+const alumno2 = new Alumno("María", "Gómez", 21);
+const alumno3 = new Alumno("Carlos", "López", 19);
+
+// Creación de instancia de grupo
+const grupoA = new Grupo("Grupo A");
+
+// Asignación de alumnos al grupo
+grupoA.agregarAlumno(alumno1);
+grupoA.agregarAlumno(alumno2);
+grupoA.agregarAlumno(alumno3);
+
+// Obtener la lista de alumnos en el grupo
+const alumnosGrupoA = grupoA.obtenerAlumnos();
+console.log("Alumnos en el Grupo A:", alumnosGrupoA);
