@@ -69,7 +69,7 @@ function Grupo(nombreGrupo) {
 }
 
 // Creación de instancias de alumnos
-const alumno1 = new Alumno("Juan", "Pérez", 20);
+//const alumno1 = new Alumno("Juan", "Pérez", 20);
 const alumno2 = new Alumno("María", "Gómez", 21);
 const alumno3 = new Alumno("Carlos", "López", 19);
 

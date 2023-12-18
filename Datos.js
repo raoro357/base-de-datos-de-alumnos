@@ -7,19 +7,13 @@ function Alumno(nombre, apellidos, edad) {
       nombre: document.getElementById("Nombre").value,
       apellidos: document.getElementById("Apellido").value,
       edad: document.getElementById("Edad").value,
-      //materia:document.getElementById("Clase").value,
-      //sumaCalificaciones:document.getElementById("Calificacion").value
-    };
-    function guardarDatosEnLocalStorage1() {
-      //let i="alumno";
-      //for ( i = 0; i < 1; i++) {
-        let Clases={
-          materiasInscritas:document.getElementById("Clase").value,
-          sumaCalificaciones:document.getElementById("Calificacion").value
-        };
-        localStorage.setItem("Alumno4", JSON.stringify(Alumno));
+      materiasInscritas:document.getElementById("Clase").value,
+      calificaciones:document.getElementById("Calificacion").value,
 
-        
+    };
+
+    function guardarDatosEnLocalStorage1() {
+        localStorage.setItem("alumno4", JSON.stringify(Alumno));
       }
     guardarDatosEnLocalStorage1();
   });
@@ -75,6 +69,7 @@ function Alumno(nombre, apellidos, edad) {
 
         if(apellidos.indexOf(this.apellidos)>-1){
             console.log("El apellido "+  this.apellidos + " si exite en el platel y es el alumno " + this.nombre);
+            alert("Hola");
            
 
         }else{
@@ -115,12 +110,14 @@ function Alumno(nombre, apellidos, edad) {
 
 
   function Grupo(nombreGrupo) {
+    nombreGrupo=document.getElementById("lang").value;
     this.nombreGrupo = nombreGrupo;
     this.alumnos = [];
   
     // Método para añadir un alumno al grupo
     this.agregarAlumno = function(alumno) {
       this.alumnos.push(alumno);
+
     };
   
     // Método para obtener la lista de alumnos en el grupo
