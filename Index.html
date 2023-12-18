@@ -3,32 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./Datos.js" defer></script>
+    <link rel="stylesheet" href="./estilos.css">
     <title>Document</title>
 </head>
 <body>
-    <h3> Registo de alumno</h3>
-    <input type="button" value="Registro de Alumno">
-    <input type="text" placeholder="Nombre" id="Nombre" class="Nombre">
-    <input type="text" placeholder="Apellido" id="Apellido" class="Apellido">
-    <input type="text" placeholder="Edad" id="Edad" class="Edad">
-    <input type="button" value="Guardar el registro">
-    <h3> Inscripcion de clase</h3>
-    <input type="button" value="Incripcion de alumno">
-    <input type="text" placeholder="Clase" id="Clase" class="Clase">
-    <input type="text" placeholder="Calificacion" id="Calificacion" class="Calificacion">
-    <input type="text" placeholder="Grupo Asignar" id="Grupo_Asignar" class="Grupo_Asignar">
-    <input type="button" value="Guardar la inscrpcion">
-    <h3>Busqueda de Datos</h3>
-    <input type="text" placeholder=" Buqueda Nombre" id="B_Nombre" class="B_Nombre">
-    <input type="button" value="Busqueda por Nombre">
-    <input type="text" placeholder="Busqueda Apellido" id="B_Apellido" class="B_Apellido">
-    <input type="button" value="Busqueda por Apellido">
-    <input type="text" placeholder="Promedio de alumno" id="P_Alumno" class="P_Alumno">
-    <input type="button" value="Promedio de alumno">
-    <input type="text" placeholder="Promedio de Grupo" id="P_Grupo" class="P_Grupo">
-    <input type="button" value="Promedio de Grupo">
-    <h1>hola</h1>
+    <form id="form">
+        <h3> Registo de alumno</h3>
+        <input type="text" placeholder="Nombre" id="Nombre" class="input" >
+        <input type="text" placeholder="Apellido" id="Apellido" class="input">
+        <input type="text" placeholder="Edad" id="Edad" class="input">
+        <button type="submit" onclick="activarALCL()">Guardar el registro</button>
+        <h3> Inscripcion de clase</h3>
+        <input type="text" placeholder="Clase" id="Clase" class="input" disabled="">
+        <input type="text" placeholder="Calificacion" id="Calificacion" class="input" disabled="">
+            <label for="lang">Grupo Asignar</label>
+                <select name="Grupo Asignar" id="lang" disabled="">
+                    <option value="GrupoA">Grupo A</option>
+                    <option value="GrupoB">Grupo B</option>
+                    <option value="GrupoC">Grupo C</option>
+                </select>
+        <button type="submit" disabled>Guardar clase</button>
+        <h3>Busqueda de Datos</h3>
+        <input type="text" placeholder=" Buqueda Nombre" id="B_Nombre" class="input">
+        <button type="submit">Busqueda por Nombre</button>
+        <input type="text" placeholder="Busqueda Apellido" id="B_Apellido" class="input">
+        <button type="submit">Busqueda por Apellido</button>
+        <h3>Promedios</h3>
+        <input type="text" placeholder="Promedio de alumno" id="P_Alumno" class="input">
+        <button type="submit">Promedio de Alumno</button>
+        <input type="text" placeholder="Promedio de Grupo" id="P_Grupo" class="input">
+        <button type="submit">Promedio de Grupo</button>
+       
+    </form>
 
-    
+
 </body>
 </html>
